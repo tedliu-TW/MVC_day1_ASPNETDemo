@@ -1,0 +1,36 @@
+﻿@model ASPNETDemo.Models.Hello
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<body>
+    @using(Html.BeginForm())
+    {
+        <div>
+            <label style="color:royalblue">
+                @if(Model !=null)
+                {
+                    <span>
+                        @Model.HelloMessage()
+                    </span>  
+                }
+                else
+                {
+                    <span>Hello</span>
+                }
+            </label>
+        </div>
+        <div>
+            <input id="xname" name="xname"/>
+            <input type="submit" value="Say Hello" />
+        </div>
+    }
+</body>
+</html>
+
